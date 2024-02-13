@@ -1,0 +1,20 @@
+Comentários 
+// Criar instâncias dos jogadores
+// Executar objetivos para obter os textos
+// Criar array com os dados dos jogadores
+
+-- Comentários desnecessários 
+
+Nome das Variavéis 
+const objetivo1 = player1.executeCurrentObjective();
+const objetivo2 = player2.executeCurrentObjective();
+
+-- Pouca clareza no que as variavéis estão armazenando
+
+Nome de Rota
+app.get("/player_info/", (req, res) => {
+    res.status(200).json(playersData);
+});
+
+-- O nome da rota faz relação a informação de um unico jogador, 
+ficaria melhor ao utilizar algum quantificador no nome da rota 'all'
