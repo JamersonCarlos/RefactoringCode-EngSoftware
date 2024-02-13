@@ -5,22 +5,20 @@ const { DerrotarPlayerAzulObjective, ConquistarEuropaObjective, Player } = requi
 
 app.use(express.json());
 
-// Criar instâncias dos jogadores
 const player1 = new Player(new ConquistarEuropaObjective());
 const player2 = new Player(new DerrotarPlayerAzulObjective());
 
-// Executar objetivos para obter os textos
 const objetivo1 = player1.executeCurrentObjective();
 const objetivo2 = player2.executeCurrentObjective();
 
-// Criar array com os dados dos jogadores
 const playersData = [
   { name: "Player1", objective: objetivo1 },
   { name: "Player2", objective: objetivo2 },
 ];
 
+
 // Rota para obter todos os jogadores cadastrados
-app.get("/player_info/", (req, res) => {
+app.get("/playersAll_info/", (req, res) => {
     res.status(200).json(playersData);
 });
 
