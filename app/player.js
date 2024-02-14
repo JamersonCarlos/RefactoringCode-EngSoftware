@@ -1,11 +1,9 @@
 class Player {
-    constructor(objectiveStrategy, id, identificationSimbol, name, mapa) {
+    constructor(objectiveStrategy, id, name, mapa) {
       this.objectiveStrategy = objectiveStrategy;
       this.id = id; 
-      this.identificationSimbol = identificationSimbol; 
       this.name = name; 
       this.mapa = mapa; 
-      this.listTerritoryPlayer = [];
     }
   
     executeCurrentObjective() {
