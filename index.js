@@ -13,17 +13,6 @@ listIdentificationsPlayerMapa = ['%', '$', '*', '#']
 mapa = new Mapa();
 mapa.nomeMapa = 'Nether Minecraft';
 
-//Inicializando a matriz do mapa 
-let mapaMatriz = [];
-for (let i = 0; i < 3; i++) {
-  mapaMatriz.push([]);
-  for (let g = 0; g < 14; g++) {
-    mapaMatriz[i].push('|');
-  }
-}
-
-//Definindo mapa com 42 territórios
-mapa.mapaMatriz = mapaMatriz; 
 
 // Rota para definir jogadores
 app.post('/setPlayers', (req, res) => {

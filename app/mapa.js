@@ -7,13 +7,20 @@ class Mapa {
   
       this.nomeMapa = null;
       this.territories = null;
-      this.mapaMatriz = [
-        ['|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|'],
-        ['|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|'],
-        ['|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|']
-      ];
+      this.mapaMatriz = [];
       this.players = null;
-  
+
+      if(this.mapaMatriz.length == 0){ 
+        for (let i = 0; i < 3; i++){ 
+          var lineMatriz = []
+          for (let k = 0; k < 14; k++){ 
+            lineMatriz.push(['|', {'NumeroTropas': 0}]);
+          }
+          this.mapaMatriz.push(lineMatriz);
+        }
+      }
+
+      console.log(this.mapaMatriz);
       Mapa.instance = this;
   
       return this;
