@@ -4,3 +4,7 @@ class Territory {
         this.cordenadas = cordenadas; 
     }
 }
+
+module.exports = { 
+    Territory,
+}
