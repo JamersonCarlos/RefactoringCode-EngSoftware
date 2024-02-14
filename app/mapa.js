@@ -44,7 +44,7 @@ class Mapa {
           const l = Math.floor(Math.random() * 3);
           const c = Math.floor(Math.random() * 14);
           if (this.mapaMatriz[l][c][0] === '|') {
-            this.mapaMatriz[l][c][0] = this.players[i].id;
+            this.mapaMatriz[l][c][0] = this.players[i].symbol_id;
             qtdTerritoriosPlayer += 1;
           }
         }

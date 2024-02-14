@@ -1,7 +1,7 @@
 class Player {
     constructor(objectiveStrategy, id, name, mapa) {
       this.objectiveStrategy = objectiveStrategy;
-      this.id = id; 
+      this.symbol_id = id; 
       this.name = name; 
       this.mapa = mapa; 
     }
