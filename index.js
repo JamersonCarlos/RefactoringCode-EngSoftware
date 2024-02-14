@@ -10,9 +10,9 @@ app.use(express.json());
 
 //Inicializando mapa 
 listIdentificationsPlayerMapa = ['%', '$', '*', '#']
+objetivos = [new DerrotarPlayerAzulObjective, new ConquistarEuropaObjective]
 mapa = new Mapa();
 mapa.nomeMapa = 'Nether Minecraft';
-
 
 // Rota para definir jogadores
 app.post('/setPlayers', (req, res) => {
@@ -20,11 +20,11 @@ app.post('/setPlayers', (req, res) => {
     const data = req.body;
 
     if (data.players.length < 4 && data.players.length > 0) {
-      const listPlayers = [];
-      const listIdentificationsPlayerMapa = [/* define as identificações conforme necessário */];
+      let listPlayers = [];
 
       for (let i = 0; i < data.players.length; i++) {
-        listPlayers.push(new Player(listIdentificationsPlayerMapa[i], data.players[i], mapa));
+        const l = Math.floor(Math.random() * 2);
+        listPlayers.push(new Player(objetivos[l],listIdentificationsPlayerMapa[i], data.players[i], mapa));
       }
 
       mapa.players = listPlayers;

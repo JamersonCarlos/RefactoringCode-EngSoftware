@@ -44,8 +44,8 @@ class Mapa {
         while (qtdTerritoriosPlayer < 42 / this.players.length) {
           const l = Math.floor(Math.random() * 3);
           const c = Math.floor(Math.random() * 14);
-          if (this.mapaMatriz[l][c] === '|') {
-            this.mapaMatriz[l][c] = this.players[i].id;
+          if (this.mapaMatriz[l][c][0] === '|') {
+            this.mapaMatriz[l][c][0] = this.players[i].id;
             qtdTerritoriosPlayer += 1;
           }
         }
