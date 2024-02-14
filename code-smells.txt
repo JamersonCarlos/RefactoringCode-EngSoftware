@@ -18,3 +18,6 @@ app.get("/player_info/", (req, res) => {
 
 -- O nome da rota faz relação a informação de um unico jogador, 
 ficaria melhor ao utilizar algum quantificador no nome da rota 'all'
+
+Comentários nos métodos da class player 
+--Comentários desnecessários, visto a clareza do que o método faz. 
