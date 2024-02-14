@@ -43,6 +43,23 @@ app.post('/setPlayers', (req, res) => {
   }
 });
 
+// Rota para definir quantidade de tropas para um território 
+app.post('/player_addTropas', (req, res)=> { 
+  try{ 
+    const data = req.body; 
+  // data = {'symbol_id': "$", 'cordenadas': [0,0], 'numero_tropas': 2}
+  if(mapa.mapaMatriz[0][data.cordenadas[0]][data.cordenadas[1]] == data.symbol_id){ 
+    mapa.mapaMatriz[1].NumeroTropas = data.numero_tropas; 
+    res.json({'mensagem': 'Tropa adicionada com sucesso!'});
+  } else { 
+    res.json({'mensagem': 'O território pertence a outro jogador'});
+  }
+  } catch(e){ 
+    res.status(500).json({'mensagem': 'Cordenadas invalidas'})
+  }
+})
+
+
 // Rota para definir territórios 
 app.get('/setTerritories', (req, res)=> { 
   listTerritories = [];
