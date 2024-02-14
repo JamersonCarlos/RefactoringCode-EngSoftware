@@ -20,7 +20,6 @@ class Mapa {
         }
       }
 
-      console.log(this.mapaMatriz);
       Mapa.instance = this;
   
       return this;
